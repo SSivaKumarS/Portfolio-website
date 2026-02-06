@@ -1,0 +1,388 @@
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    background: #020617;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #38bdf8;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #38bdf8;
+}
+
+
+/* ================= SECTION BASE ================= */
+
+section {
+    min-height: 100vh;
+    /* 🔥 VH DIVISION */
+    padding: 90px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ================= HOME ================= */
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.home-text h3 {
+    font-size: 18px;
+    color: #94a3b8;
+}
+
+.home-text h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 12px 0;
+}
+
+.home-text h2 {
+    font-size: 22px;
+}
+
+.home-text span {
+    color: #38bdf8;
+}
+
+.home-text p {
+    margin-top: 18px;
+    max-width: 520px;
+    color: #cbd5f5;
+}
+
+
+/* ---- HOME IMAGE CIRCLE ---- */
+
+.glow-circle {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #38bdf8;
+    box-shadow: 0 0 35px rgba(56, 189, 248, 0.5);
+    flex-shrink: 0;
+}
+
+.glow-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 🔥 PERFECT FIT */
+    object-position: center;
+    display: block;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    max-width: 1100px;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about-content h2 span {
+    color: #38bdf8;
+}
+
+.about-content h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #94a3b8;
+}
+
+
+/* ---- ABOUT IMAGE CIRCLE ---- */
+
+.circle {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #38bdf8;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 🔥 PERFECT FIT */
+    object-position: center;
+}
+
+
+/* ================= SKILLS ================= */
+
+.skills {
+    flex-direction: column;
+}
+
+.skills h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.skill-card {
+    background: #020617;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.skill-card .icon {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+
+/* ================= PROJECTS ================= */
+
+.projects {
+    flex-direction: column;
+}
+
+.projects h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.projects h2 span {
+    color: #38bdf8;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card {
+    background: #020617;
+    padding: 30px;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    flex-direction: column;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.contact h2 span {
+    color: #38bdf8;
+}
+
+.contact form {
+    max-width: 650px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 140px;
+    resize: none;
+}
+
+
+/* 🔥 CENTER SUBMIT BUTTON */
+
+.contact button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 14px 40px;
+    border-radius: 10px;
+    background: #38bdf8;
+    color: #020617;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.contact button:hover {
+    background: #0ea5e9;
+}
+
+
+/* Popup */
+
+.popup {
+    margin-top: 18px;
+    text-align: center;
+    color: #22c55e;
+    font-weight: 600;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #020617;
+    padding: 45px 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.footer-brand h3 {
+    color: #38bdf8;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #e5e7eb;
+}
+
+.footer-links a:hover {
+    color: #38bdf8;
+}
+
+.footer-social a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #e5e7eb;
+}
+
+.footer-social a:hover {
+    color: #38bdf8;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+    section {
+        padding: 80px 25px;
+    }
+    .home-container,
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .row {
+        flex-direction: column;
+    }
+}
