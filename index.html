@@ -13,7 +13,16 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">Sivakumar</div>
-        <ul>
+
+        <!-- Animated Hamburger -->
+        <div class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Slide-in Navigation -->
+        <ul class="nav-links" id="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -21,6 +30,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+
 
     <!-- Home Section -->
     <section class="home" id="home">
@@ -56,26 +66,76 @@
     </section>
 
     <!-- Skills Section -->
+    <!-- Skills Section -->
     <section class="skills" id="skills">
-        <h2>Skills</h2>
+        <h2>Technical <span>Skills</span></h2>
+
         <div class="skills-container">
-            <div class="skill-card">
-                <div class="icon" aria-hidden="true">🎨</div>
-                <h3>UI/UX Design</h3>
-                <p>Creative and modern designs</p>
+
+            <!-- Programming Languages -->
+            <div class="skill-box">
+                <h3>Programming</h3>
+                <ul>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Node.js</li>
+                    <li>Java (Basics)</li>
+                </ul>
             </div>
-            <div class="skill-card">
-                <div class="icon" aria-hidden="true">&lt;/&gt;</div>
-                <h3>Web Development</h3>
-                <p>HTML, CSS, JavaScript, React</p>
+
+            <!-- Frontend -->
+            <div class="skill-box">
+                <h3>Frontend</h3>
+                <ul>
+                    <li>React</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Tailwind CSS (Basics)</li>
+                </ul>
             </div>
-            <div class="skill-card">
-                <div class="icon" aria-hidden="true">⚙️</div>
-                <h3>Backend Development</h3>
-                <p>Node.js, Express, MongoDB</p>
+
+            <!-- Backend -->
+            <div class="skill-box">
+                <h3>Backend</h3>
+                <ul>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                </ul>
             </div>
+
+            <!-- Databases -->
+            <div class="skill-box">
+                <h3>Databases</h3>
+                <ul>
+                    <li>MongoDB</li>
+                    <li>PostgreSQL (Basics)</li>
+                </ul>
+            </div>
+
+            <!-- APIs -->
+            <div class="skill-box">
+                <h3>APIs & Integrations</h3>
+                <ul>
+                    <li>REST APIs</li>
+                    <li>Weather API</li>
+                    <li>Formspree</li>
+                    <li>Axios & Fetch</li>
+                </ul>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-box">
+                <h3>Tools & Platforms</h3>
+                <ul>
+                    <li>Git & GitHub</li>
+                    <li>VS Code</li>
+                    <li>Postman</li>
+                    <li>ChatGPT</li>
+                </ul>
+            </div>
+
         </div>
     </section>
+
 
     <!-- Projects Section -->
     <section class="projects" id="projects">
@@ -168,6 +228,20 @@
             } else {
                 alert("Oops! There was a problem submitting your form.");
             }
+        });
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+
+        // Toggle menu on hamburger click
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+        // Close menu when link clicked (mobile UX fix)
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+            });
         });
     </script>
 

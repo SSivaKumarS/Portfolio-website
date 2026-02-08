@@ -1,4 +1,6 @@
-/* ================= RESET ================= */
+/* =====================================================
+   1. RESET & BASE
+===================================================== */
 
 * {
     margin: 0;
@@ -18,7 +20,22 @@ body {
 }
 
 
-/* ================= NAVBAR ================= */
+/* =====================================================
+   2. SECTION BASE
+===================================================== */
+
+section {
+    min-height: 100vh;
+    padding: 90px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =====================================================
+   3. NAVBAR + HAMBURGER
+===================================================== */
 
 .navbar {
     display: flex;
@@ -37,36 +54,63 @@ body {
     color: #38bdf8;
 }
 
-.navbar ul {
-    display: flex;
+
+/* Desktop menu */
+
+.nav-links {
     list-style: none;
+    display: flex;
     gap: 28px;
 }
 
-.navbar a {
+.nav-links a {
     text-decoration: none;
     color: #e5e7eb;
     font-weight: 500;
 }
 
-.navbar a:hover {
+.nav-links a:hover {
     color: #38bdf8;
 }
 
 
-/* ================= SECTION BASE ================= */
+/* Hamburger */
 
-section {
-    min-height: 100vh;
-    /* 🔥 VH DIVISION */
-    padding: 90px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburger span {
+    width: 26px;
+    height: 3px;
+    background: #e5e7eb;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.35s ease;
 }
 
 
-/* ================= HOME ================= */
+/* X animation */
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+
+/* =====================================================
+   4. HOME
+===================================================== */
 
 .home-container {
     display: flex;
@@ -84,7 +128,6 @@ section {
 
 .home-text h1 {
     font-size: 48px;
-    line-height: 1.2;
     margin: 12px 0;
 }
 
@@ -103,7 +146,7 @@ section {
 }
 
 
-/* ---- HOME IMAGE CIRCLE ---- */
+/* Home Image */
 
 .glow-circle {
     width: 280px;
@@ -112,20 +155,18 @@ section {
     overflow: hidden;
     border: 4px solid #38bdf8;
     box-shadow: 0 0 35px rgba(56, 189, 248, 0.5);
-    flex-shrink: 0;
 }
 
 .glow-circle img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* 🔥 PERFECT FIT */
-    object-position: center;
-    display: block;
 }
 
 
-/* ================= ABOUT ================= */
+/* =====================================================
+   5. ABOUT
+===================================================== */
 
 .about-container {
     display: flex;
@@ -136,7 +177,6 @@ section {
 
 .about-content h2 {
     font-size: 36px;
-    margin-bottom: 10px;
 }
 
 .about-content h2 span {
@@ -145,12 +185,12 @@ section {
 
 .about-content h4 {
     font-size: 18px;
-    margin-bottom: 15px;
     color: #94a3b8;
+    margin-bottom: 15px;
 }
 
 
-/* ---- ABOUT IMAGE CIRCLE ---- */
+/* About Image */
 
 .circle {
     width: 240px;
@@ -164,12 +204,12 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* 🔥 PERFECT FIT */
-    object-position: center;
 }
 
 
-/* ================= SKILLS ================= */
+/* =====================================================
+   6. SKILLS
+===================================================== */
 
 .skills {
     flex-direction: column;
@@ -180,6 +220,10 @@ section {
     margin-bottom: 50px;
 }
 
+.skills h2 span {
+    color: #38bdf8;
+}
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -188,26 +232,26 @@ section {
     width: 100%;
 }
 
-.skill-card {
+.skill-box {
     background: #020617;
     padding: 30px;
     border-radius: 16px;
-    text-align: center;
-    transition: 0.3s;
+    border: 1px solid #1e293b;
 }
 
-.skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-}
-
-.skill-card .icon {
-    font-size: 34px;
+.skill-box h3 {
+    color: #38bdf8;
     margin-bottom: 12px;
 }
 
+.skill-box ul {
+    list-style: none;
+}
 
-/* ================= PROJECTS ================= */
+
+/* =====================================================
+   7. PROJECTS
+===================================================== */
 
 .projects {
     flex-direction: column;
@@ -244,11 +288,12 @@ section {
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
 
-/* ================= CONTACT ================= */
+/* =====================================================
+   8. CONTACT
+===================================================== */
 
 .contact {
     flex-direction: column;
@@ -280,17 +325,13 @@ textarea {
     padding: 14px;
     border-radius: 10px;
     border: none;
-    outline: none;
     font-size: 15px;
 }
 
 textarea {
-    min-height: 140px;
     resize: none;
+    min-height: 140px;
 }
-
-
-/* 🔥 CENTER SUBMIT BUTTON */
 
 .contact button {
     display: block;
@@ -298,28 +339,14 @@ textarea {
     padding: 14px 40px;
     border-radius: 10px;
     background: #38bdf8;
-    color: #020617;
-    font-weight: 600;
-    cursor: pointer;
     border: none;
-}
-
-.contact button:hover {
-    background: #0ea5e9;
+    cursor: pointer;
 }
 
 
-/* Popup */
-
-.popup {
-    margin-top: 18px;
-    text-align: center;
-    color: #22c55e;
-    font-weight: 600;
-}
-
-
-/* ================= FOOTER ================= */
+/* =====================================================
+   9. FOOTER
+===================================================== */
 
 .footer {
     background: #020617;
@@ -332,37 +359,6 @@ textarea {
     gap: 30px;
 }
 
-.footer-brand h3 {
-    color: #38bdf8;
-}
-
-.footer-links {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 8px;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: #e5e7eb;
-}
-
-.footer-links a:hover {
-    color: #38bdf8;
-}
-
-.footer-social a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: #e5e7eb;
-}
-
-.footer-social a:hover {
-    color: #38bdf8;
-}
-
 .footer-copy {
     text-align: center;
     margin-top: 30px;
@@ -371,11 +367,32 @@ textarea {
 }
 
 
-/* ================= MOBILE ================= */
+/* =====================================================
+   10. MOBILE RESPONSIVE
+===================================================== */
 
 @media (max-width: 768px) {
     section {
         padding: 80px 25px;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        background: #020617;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.8rem;
+        transition: right 0.4s ease;
+    }
+    .nav-links.active {
+        right: 0;
     }
     .home-container,
     .about-container {
