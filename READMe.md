@@ -1,41 +1,41 @@
-# 🌐 Personal Portfolio Website – Siva Kumar
+#  Personal Portfolio Website – Siva Kumar
 
 A modern, responsive **personal portfolio website** built using **HTML, CSS, and JavaScript**.  
 This website showcases personal details, skills, projects, and a working contact form.
 
 ---
 
-## ✨ Features
+##  Features
 
-### 🧭 Navigation
+###  Navigation
 - Fixed navigation bar
 - Smooth section-based navigation
 - Sections: Home, About, Skills, Projects, Contact
 
-### 🏠 Home Section
+###  Home Section
 - Professional introduction
 - Animated glow profile image
 - Clear role display (Web Developer & Backend Developer)
 
-### 👤 About Section
+###  About Section
 - Short professional summary
 - Profile image with circular glow effect
 - Role description
 
-### 🛠️ Skills Section
+### Skills Section
 - Card-based skill layout
 - UI/UX Design
 - Web Development (HTML, CSS, JavaScript, React)
 - Backend Development (Node.js, Express, MongoDB)
 
-### 📁 Projects Section
+### Projects Section
 - E-commerce Website
 - Portfolio Website
 - AnonSpace – Private Social Media Platform
 - Weather API Project
 - Clean hover effects and responsive cards
 
-### 📩 Contact Section
+###  Contact Section
 - Contact form with:
   - First Name
   - Last Name
@@ -45,14 +45,14 @@ This website showcases personal details, skills, projects, and a working contact
 - Integrated **Formspree API**
 - Success popup after message submission
 
-### 🦶 Footer
+###  Footer
 - Quick navigation links
 - GitHub and LinkedIn profile links
 - Copyright notice
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - **HTML5**
 - **CSS3**
@@ -61,7 +61,7 @@ This website showcases personal details, skills, projects, and a working contact
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 portfolio-website/
 │
@@ -74,10 +74,3 @@ portfolio-website/
 └── README.md
 
 
----
-
-## ⚙️ How to Run the Project
-
-1. Download or clone the project
-```bash
-git clone <repository-url>
