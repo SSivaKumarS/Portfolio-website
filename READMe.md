@@ -58,7 +58,7 @@ This website showcases personal details, skills, projects, and a working contact
 - **CSS3**
 - **JavaScript (Vanilla)**
 - **Formspree** (for contact form handling)
-
+ 
 ---
 
 ##  Project Structure
