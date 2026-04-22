@@ -1,77 +1,62 @@
-/* =====================================================
-   1. RESET & BASE
-===================================================== */
+/* Google Font */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", Arial, sans-serif;
-}
-
-html {
     scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: #0f172a;
-    color: #e5e7eb;
-    line-height: 1.6;
+    background: #081b29;
+    color: #fff;
+    overflow-x: hidden;
 }
-
-
-/* =====================================================
-   2. SECTION BASE
-===================================================== */
 
 section {
-    min-height: 100vh;
-    padding: 90px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 90px 10%;
 }
 
 
-/* =====================================================
-   3. NAVBAR + HAMBURGER
-===================================================== */
+/* ================= NAVBAR ================= */
 
 .navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 18px 10%;
+    background: #051129;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 50px;
-    background: #020617;
-    position: sticky;
-    top: 0;
     z-index: 1000;
 }
 
 .logo {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 700;
-    color: #38bdf8;
+    color: #0ef;
 }
-
-
-/* Desktop menu */
 
 .nav-links {
-    list-style: none;
     display: flex;
-    gap: 28px;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
 }
 
-.nav-links a {
+.nav-links li a {
     text-decoration: none;
-    color: #e5e7eb;
-    font-weight: 500;
+    color: #fff;
+    font-size: 17px;
     transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: #38bdf8;
+.nav-links li a:hover {
+    color: #0ef;
 }
 
 
@@ -79,27 +64,43 @@ section {
 
 .hamburger {
     display: none;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 1100;
-    background: none;
+    width: 32px;
+    height: 28px;
     border: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1100;
 }
 
 .hamburger span {
-    width: 22px;
+    position: absolute;
+    left: 0;
+    width: 100%;
     height: 3px;
-    background: #e5e7eb;
-    margin: 4px 0;
-    border-radius: 2px;
-    transition: 0.35s ease;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 11px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 22px;
 }
 
 
-/* X animation — FIXED (open class) */
+/* Open Animation */
 
 .hamburger.open span:nth-child(1) {
-    transform: rotate(40deg) translate(5px, 6px);
+    transform: rotate(45deg);
+    top: 11px;
 }
 
 .hamburger.open span:nth-child(2) {
@@ -107,221 +108,187 @@ section {
 }
 
 .hamburger.open span:nth-child(3) {
-    transform: rotate(-40deg) translate(5px, -6px);
+    transform: rotate(-45deg);
+    top: 11px;
 }
 
 
-/* =====================================================
-   4. HOME
-===================================================== */
+/* ================= HOME ================= */
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
 
 .home-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 60px;
-    max-width: 1200px;
-    width: 100%;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.home-text {
+    flex: 1;
 }
 
 .home-text h3 {
-    font-size: 18px;
-    color: #94a3b8;
+    font-size: 28px;
 }
 
 .home-text h1 {
-    font-size: 48px;
-    margin: 12px 0;
+    font-size: 55px;
+    margin: 10px 0;
 }
 
 .home-text h2 {
-    font-size: 22px;
+    font-size: 30px;
 }
 
 .home-text span {
-    color: #38bdf8;
+    color: #0ef;
 }
 
 .home-text p {
-    margin-top: 18px;
-    max-width: 520px;
-    color: #cbd5f5;
+    margin: 20px 0;
+    line-height: 1.8;
+    max-width: 550px;
 }
 
+.home-buttons a {
+    display: inline-block;
+    margin-right: 12px;
+    margin-top: 10px;
+    padding: 12px 28px;
+    background: #0ef;
+    color: #081b29;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
 
-/* Home Image */
+.home-buttons a:hover {
+    transform: translateY(-5px);
+}
+
+.home-image img {
+    width: 320px;
+    max-width: 100%;
+    border-radius: 50%;
+    border: 5px solid #0ef;
+}
 
 .glow-circle {
-    width: 280px;
-    height: 280px;
     border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid #38bdf8;
-    box-shadow: 0 0 35px rgba(56, 189, 248, 0.5);
-}
-
-.glow-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    box-shadow: 0 0 30px #0ef;
 }
 
 
-/* =====================================================
-   5. ABOUT
-===================================================== */
+/* ================= COMMON ================= */
+
+h2 span {
+    color: #0ef;
+}
+
+
+/* ================= ABOUT ================= */
 
 .about-container {
     display: flex;
     align-items: center;
-    gap: 70px;
-    max-width: 1100px;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-image img {
+    width: 320px;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.about-content {
+    flex: 1;
 }
 
 .about-content h2 {
-    font-size: 36px;
-}
-
-.about-content h2 span {
-    color: #38bdf8;
-}
-
-.about-content h4 {
-    font-size: 18px;
-    color: #94a3b8;
+    font-size: 42px;
     margin-bottom: 15px;
 }
 
-
-/* About Image */
-
-.circle {
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid #38bdf8;
+.about-content h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
-.circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.about-content p {
+    line-height: 1.8;
+    margin-bottom: 10px;
 }
 
 
-/* =====================================================
-   6. SKILLS
-===================================================== */
+/* ================= BOX SECTIONS ================= */
 
-.skills {
-    flex-direction: column;
+.education h2,
+.skills h2,
+.projects h2,
+.contact h2 {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.skills h2 {
-    font-size: 36px;
-    margin-bottom: 50px;
-}
-
-.skills h2 span {
-    color: #38bdf8;
-}
-
-.skills-container {
+.edu-container,
+.skills-container,
+.projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    max-width: 1100px;
-    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
 }
 
-.skill-box {
-    background: #020617;
-    padding: 30px;
-    border-radius: 16px;
-    border: 1px solid #1e293b;
+.edu-box,
+.skill-box,
+.project-card {
+    background: #112e42;
+    padding: 25px;
+    border-radius: 15px;
     transition: 0.3s;
 }
 
-.skill-box:hover {
-    transform: translateY(-6px);
-    border-color: #38bdf8;
+.edu-box:hover,
+.skill-box:hover,
+.project-card:hover {
+    transform: translateY(-8px);
 }
 
-.skill-box h3 {
-    color: #38bdf8;
-    margin-bottom: 12px;
+.edu-box h3,
+.skill-box h3,
+.project-card h3 {
+    color: #0ef;
+    margin-bottom: 10px;
 }
 
 .skill-box ul {
     list-style: none;
 }
 
-
-/* =====================================================
-   7. PROJECTS
-===================================================== */
-
-.projects {
-    flex-direction: column;
-}
-
-.projects h2 {
-    font-size: 36px;
-    margin-bottom: 50px;
-}
-
-.projects h2 span {
-    color: #38bdf8;
-}
-
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1100px;
-    width: 100%;
+.skill-box li {
+    margin-bottom: 10px;
 }
 
 .project-link {
+    color: #fff;
     text-decoration: none;
-    color: inherit;
-}
-
-.project-card {
-    background: #020617;
-    padding: 30px;
-    border-radius: 16px;
-    transition: 0.3s;
-    border: 1px solid #1e293b;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    border-color: #38bdf8;
 }
 
 
-/* =====================================================
-   8. CONTACT
-===================================================== */
-
-.contact {
-    flex-direction: column;
-}
-
-.contact h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-}
-
-.contact h2 span {
-    color: #38bdf8;
-}
+/* ================= CONTACT ================= */
 
 .contact form {
-    max-width: 650px;
-    width: 100%;
+    max-width: 700px;
+    margin: auto;
 }
 
 .row {
@@ -330,119 +297,131 @@ section {
     margin-bottom: 15px;
 }
 
-input,
-textarea {
+.contact input,
+.contact textarea {
     width: 100%;
     padding: 14px;
-    border-radius: 10px;
     border: none;
-    font-size: 15px;
-    background: #020617;
-    color: #e5e7eb;
+    outline: none;
+    border-radius: 10px;
+    background: #112e42;
+    color: #fff;
 }
 
-textarea {
+.contact textarea {
+    height: 180px;
     resize: none;
-    min-height: 140px;
+    margin-bottom: 15px;
 }
 
 .contact button {
-    display: block;
-    margin: 20px auto 0;
-    padding: 14px 40px;
-    border-radius: 10px;
-    background: #38bdf8;
+    padding: 12px 30px;
     border: none;
-    cursor: pointer;
+    border-radius: 30px;
+    background: #0ef;
+    color: #081b29;
     font-weight: 600;
-    transition: 0.3s;
+    cursor: pointer;
 }
 
-.contact button:hover {
-    background: #0ea5e9;
+.popup {
+    margin-top: 20px;
+    text-align: center;
+    background: #0ef;
+    color: #081b29;
+    padding: 12px;
+    border-radius: 10px;
+    display: none;
+}
+
+.popup.show {
+    display: block;
 }
 
 
-/* =====================================================
-   9. FOOTER
-===================================================== */
+/* ================= FOOTER ================= */
 
 .footer {
-    background: #020617;
-    padding: 45px 50px;
+    background: #051129;
+    padding: 40px 10%;
+    text-align: center;
 }
 
 .footer-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: flex;
+    justify-content: space-between;
     gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-brand h3 {
+    color: #0ef;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links a,
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: #0ef;
 }
 
 .footer-copy {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
-    color: #9ca3af;
+    margin-top: 20px;
+    color: #aaa;
 }
 
 
-/* =====================================================
-   10. MOBILE RESPONSIVE
-===================================================== */
+/* ================= MOBILE ================= */
 
-@media (max-width: 768px) {
-    section {
-        padding: 80px 25px;
-    }
+@media(max-width:768px) {
     .hamburger {
-        display: flex;
+        display: block;
     }
     .nav-links {
         position: fixed;
-        top: 0;
+        top: 70px;
         right: -100%;
-        height: 100vh;
-        width: 70%;
-        background: #020617;
+        width: 250px;
+        height: auto;
+        background: #051129;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.8rem;
-        transition: right 0.4s ease;
+        align-items: flex-start;
+        padding: 25px;
+        gap: 20px;
+        transition: 0.4s ease;
+        box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.3);
     }
     .nav-links.active {
         right: 0;
     }
     .home-container,
-    .about-container {
+    .about-container,
+    .footer-container,
+    .row {
         flex-direction: column;
         text-align: center;
     }
-    .row {
-        flex-direction: column;
+    .home-text h1 {
+        font-size: 40px;
     }
-}
-
-
-/* =====================================================
-   11. POPUP
-===================================================== */
-
-.popup {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #38bdf8;
-    color: #020617;
-    padding: 12px 20px;
-    border-radius: 8px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: 0.3s;
-    font-weight: 600;
-}
-
-.popup.show {
-    opacity: 1;
-    transform: translateY(0);
+    .home-text h2 {
+        font-size: 24px;
+    }
+    .home-buttons a {
+        margin-bottom: 10px;
+    }
+    .footer-links,
+    .footer-social {
+        width: 100%;
+    }
 }
