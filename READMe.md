@@ -55,7 +55,6 @@ This portfolio showcases my profile, technical skills, education, projects, and 
 
 #### Programming
 - JavaScript (ES6+)
-- Node.js
 - Java Basics
 
 #### Frontend
@@ -76,15 +75,10 @@ This portfolio showcases my profile, technical skills, education, projects, and 
 - Git
 - GitHub
 - VS Code
-- Postman
 
 #### APIs
 - REST APIs
 - WeatherAPI
-- Axios
-- Fetch
-
----
 
 ## Projects
 
