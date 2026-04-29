@@ -1,95 +1,132 @@
 # Personal Portfolio Website – Siva Kumar
 
-A modern, responsive **Personal Portfolio Website** built using **HTML, CSS, and JavaScript**.
+A modern, responsive **Personal Portfolio Website** built using **HTML5, CSS3, and JavaScript**.
 
-This portfolio showcases my profile, technical skills, education, projects, and a working contact form. Designed to present my work professionally for recruiters, clients, and job opportunities.
+This portfolio showcases my professional profile, technical skills, education, featured projects, and a working contact form. It is designed to present my work professionally for recruiters, clients, internships, and job opportunities.
 
 ---
 
 ## Live Website
 
- https://portfolio-website-lyart-chi.vercel.app/
+https://portfolio-website-lyart-chi.vercel.app/
+
+---
+
+## Overview
+
+This portfolio was created to build a strong online presence and demonstrate frontend development skills with clean UI design and responsive layouts.
+
+It includes:
+
+- Professional landing page
+- About section
+- Education details
+- Technical skills showcase
+- Real project portfolio
+- Functional contact form
+- Mobile responsive navigation
 
 ---
 
 ## Features
 
-### Navigation
+## Navigation
+
 - Fixed responsive navbar
 - Mobile hamburger menu
 - Smooth scrolling navigation
-- Sections:
-  - Home
-  - About
-  - Education
-  - Skills
-  - Projects
-  - Contact
+
+Sections included:
+
+- Home
+- About
+- Education
+- Skills
+- Projects
+- Contact
 
 ---
 
-### Home Section
+## Home Section
+
 - Professional introduction
 - MERN Stack Developer branding
+- Frontend Developer identity
 - Profile image with glowing effect
-- Call-to-action button (Hire Me)
+- Call-to-action buttons
 
 ---
 
-### About Section
+## About Section
+
 - Short professional summary
-- Contact details
+- Career-focused introduction
 - Languages known
-- Clean modern layout with profile image
+- Profile image section
+- Clean responsive layout
 
 ---
 
-### Education Section
-- B.Tech – Computer Science Engineering (Pursuing)
-- Diploma – Computer Science Engineering
-- SSC Academic Details
+## Education Section
+
+- **B.Tech – Computer Science Engineering** (Pursuing)
+- **Diploma – Computer Science Engineering**
+- **SSC Academic Details**
 
 ---
 
-### Skills Section
+## Skills Section
 
-#### Programming
+### Programming
+
 - JavaScript (ES6+)
 - Java Basics
 
-#### Frontend
+### Frontend
+
 - React.js
 - HTML5
 - CSS3
 - Tailwind CSS
 
-#### Backend
+### Backend
+
 - Node.js
 - Express.js
 
-#### Database
+### Database
+
 - MongoDB
 - PostgreSQL
 
-#### Tools
+### Tools
+
 - Git
 - GitHub
 - VS Code
+- Postman
 
-#### APIs
+### APIs
+
 - REST APIs
-- WeatherAPI
+- Weather API
+- Fetch API
+
+---
 
 ## Projects
 
-### Portfolio Website
-Personal responsive portfolio website using HTML, CSS, JavaScript and Formspree.
+### Livora
+
+Modern PG / Coliving / Roommate Finder platform built using React with startup-style UI.
 
 ### LUXE E-Commerce Store
-Modern React e-commerce website with cart, product pages, and premium UI design.
+
+Luxury fashion e-commerce web application built using React with cart, product pages, and premium shopping experience.
 
 ### MERN Weather App
-Weather application using MongoDB, Express.js, React.js, Node.js and Weather API.
+
+Weather application built using MongoDB, Express.js, React.js, Node.js, and Weather API.
 
 ---
 
@@ -97,22 +134,26 @@ Weather application using MongoDB, Express.js, React.js, Node.js and Weather API
 
 Working contact form integrated using **Formspree**
 
-Fields:
+Fields included:
+
 - Name
 - Email
 - Phone Number
 - Message
 
-Includes success popup after submission.
+Additional features:
+
+- Success popup after submission
+- Smooth form interaction
 
 ---
 
 ## Footer
 
-- Quick links
+- Quick navigation links
 - GitHub profile
 - LinkedIn profile
-- Gmail contact
+- Email contact
 
 ---
 
@@ -121,8 +162,9 @@ Includes success popup after submission.
 - HTML5
 - CSS3
 - JavaScript
-- Responsive Design
+- Responsive Web Design
 - Formspree API
+- Vercel Deployment
 
 ---
 
@@ -133,6 +175,6 @@ portfolio-website/
 │── index.html
 │── style.css
 │── images/
-│   ├── profile.jpg
-│   └── sivakumar.jpg
+│   ├── profile.png
+│   ├── sivakumar.jpg
 │── README.md
