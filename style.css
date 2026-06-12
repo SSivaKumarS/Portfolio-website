@@ -503,3 +503,118 @@ footer p {
         flex-direction: column;
     }
 }
+
+
+/* ==========================================
+   WORK EXPERIENCE SECTION STYLING
+   ========================================== */
+
+.experience {
+    padding: 80px 5%;
+    background-color: #f9fafb;
+    /* Soft light grey background to separate sections */
+}
+
+.experience h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #111827;
+}
+
+.experience h2 span {
+    color: #4f46e5;
+    /* Indigo accent matching your theme */
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.experience-header h3 {
+    font-size: 1.6rem;
+    color: #1f2937;
+    font-weight: 700;
+}
+
+.experience-header h4 {
+    font-size: 1.1rem;
+    color: #4f46e5;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.experience-header span {
+    font-size: 0.9rem;
+    color: #374151;
+    background: #f3f4f6;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.experience-card p {
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.experience-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.experience-tech span {
+    background: #e0e7ff;
+    color: #3730a3;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+
+/* Responsive adjustment for smaller screens */
+
+@media (max-width: 768px) {
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .experience-card {
+        padding: 25px;
+    }
+}
