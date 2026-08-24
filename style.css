@@ -1,6 +1,10 @@
-/* RESET & CORE VARIABLES */
+/* ==========================================
+   RESET & CSS VARIABLES
+   ========================================== */
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,18 +12,24 @@
 }
 
 :root {
-    --bg: #090d16;
-    --card: #131b2e;
-    --primary: #38bdf8;
-    --text: #f8fafc;
-    --gray: #94a3b8;
-    --border: rgba(255, 255, 255, 0.08);
+    --bg-color: #090d16;
+    --card-bg: #131b2e;
+    --primary-color: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(56, 189, 248, 0.3);
+    --radius-sm: 8px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --transition-fast: 0.25s ease;
 }
 
 body {
     font-family: "Inter", sans-serif;
-    background: var(--bg);
-    color: var(--text);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
@@ -37,16 +47,19 @@ h2 {
 }
 
 h2 span {
-    color: var(--primary);
+    color: var(--primary-color);
 }
 
 
-/* NAVBAR */
+/* ==========================================
+   NAVIGATION BAR
+   ========================================== */
 
 .header {
     position: fixed;
-    width: 100%;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -57,11 +70,11 @@ h2 span {
     padding: 20px 10%;
     background: rgba(9, 13, 22, 0.85);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .logo {
-    color: var(--primary);
+    color: var(--primary-color);
     font-size: 26px;
     font-weight: 800;
     text-decoration: none;
@@ -75,26 +88,28 @@ h2 span {
 }
 
 .nav-links a {
-    color: var(--gray);
+    color: var(--text-muted);
     text-decoration: none;
     font-weight: 500;
     font-size: 15px;
-    transition: color 0.25s ease;
+    transition: color var(--transition-fast);
 }
 
 .nav-links a:hover {
-    color: var(--text);
+    color: var(--text-primary);
 }
 
 .menu-btn {
     display: none;
     font-size: 28px;
     cursor: pointer;
-    color: var(--text);
+    color: var(--text-primary);
 }
 
 
-/* HOME (HERO) SECTION */
+/* ==========================================
+   HERO / HOME SECTION
+   ========================================== */
 
 .home {
     min-height: 100vh;
@@ -111,7 +126,7 @@ h2 span {
 }
 
 .home-text h3 {
-    color: var(--primary);
+    color: var(--primary-color);
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -135,7 +150,7 @@ h2 span {
 }
 
 .home-text p {
-    color: var(--gray);
+    color: var(--text-muted);
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 35px;
@@ -147,16 +162,31 @@ h2 span {
     flex-wrap: wrap;
 }
 
+.home-image {
+    display: flex;
+    justify-content: center;
+}
 
-/* BUTTONS */
+.home-image img {
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border-color);
+}
+
+
+/* ==========================================
+   BUTTONS & SOCIAL LINKS
+   ========================================== */
 
 .btn {
     padding: 14px 28px;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
     text-decoration: none;
     font-weight: 600;
     font-size: 15px;
-    transition: all 0.25s ease;
+    transition: all var(--transition-fast);
     border: none;
     cursor: pointer;
     display: inline-block;
@@ -164,27 +194,24 @@ h2 span {
 }
 
 .btn-primary {
-    background: var(--text);
-    color: var(--bg);
+    background: var(--text-primary);
+    color: var(--bg-color);
 }
 
 .btn-primary:hover {
-    background: var(--primary);
+    background: var(--primary-color);
 }
 
 .btn-outline {
-    border: 1px solid var(--border);
-    color: var(--text);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
     background: transparent;
 }
 
 .btn-outline:hover {
     background: rgba(255, 255, 255, 0.05);
-    border-color: var(--gray);
+    border-color: var(--text-muted);
 }
-
-
-/* SOCIAL ICONS */
 
 .social-icons {
     display: flex;
@@ -195,37 +222,26 @@ h2 span {
 .social-icons a {
     width: 44px;
     height: 44px;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--card);
-    border: 1px solid var(--border);
-    color: var(--gray);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
     font-size: 18px;
-    transition: all 0.25s ease;
+    transition: all var(--transition-fast);
 }
 
 .social-icons a:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-}
-
-.home-image {
-    display: flex;
-    justify-content: center;
-}
-
-.home-image img {
-    width: 340px;
-    height: 340px;
-    object-fit: cover;
-    border-radius: 24px;
-    border: 1px solid var(--border);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 
-/* STATS */
+/* ==========================================
+   STATS SECTION
+   ========================================== */
 
 .stats-section {
     padding: 60px 10%;
@@ -238,33 +254,35 @@ h2 span {
 }
 
 .stat-card {
-    background: var(--card);
+    background: var(--card-bg);
     padding: 35px;
-    border-radius: 16px;
-    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
     text-align: center;
-    transition: border-color 0.25s ease;
+    transition: border-color var(--transition-fast);
 }
 
 .stat-card:hover {
-    border-color: rgba(56, 189, 248, 0.3);
+    border-color: var(--border-hover);
 }
 
 .stat-card h3 {
-    color: var(--text);
+    color: var(--text-primary);
     font-size: 42px;
     font-weight: 800;
     margin-bottom: 8px;
 }
 
 .stat-card p {
-    color: var(--gray);
+    color: var(--text-muted);
     font-size: 14px;
     font-weight: 500;
 }
 
 
-/* ABOUT */
+/* ==========================================
+   ABOUT SECTION
+   ========================================== */
 
 .about-container {
     display: grid;
@@ -275,8 +293,8 @@ h2 span {
 
 .about-image img {
     width: 100%;
-    border-radius: 24px;
-    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border-color);
 }
 
 .about-content h3 {
@@ -286,13 +304,15 @@ h2 span {
 }
 
 .about-content p {
-    color: var(--gray);
+    color: var(--text-muted);
     line-height: 1.8;
     margin-bottom: 20px;
 }
 
 
-/* EDUCATION & EXPERIENCE SCARDS */
+/* ==========================================
+   EDUCATION & EXPERIENCE
+   ========================================== */
 
 .education-container,
 .experience-container {
@@ -309,16 +329,16 @@ h2 span {
 
 .education-card,
 .experience-card {
-    background: var(--card);
+    background: var(--card-bg);
     padding: 32px;
-    border-radius: 16px;
-    border: 1px solid var(--border);
-    transition: border-color 0.25s ease;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    transition: border-color var(--transition-fast);
 }
 
 .education-card:hover,
 .experience-card:hover {
-    border-color: rgba(56, 189, 248, 0.3);
+    border-color: var(--border-hover);
 }
 
 .education-card h3,
@@ -330,14 +350,14 @@ h2 span {
 
 .experience-header h4 {
     font-size: 16px;
-    color: var(--primary);
+    color: var(--primary-color);
     font-weight: 500;
     margin-bottom: 15px;
 }
 
 .education-card p,
 .experience-card p {
-    color: var(--gray);
+    color: var(--text-muted);
     margin-bottom: 15px;
     line-height: 1.7;
 }
@@ -345,12 +365,12 @@ h2 span {
 .education-card span,
 .experience-header span {
     font-size: 13px;
-    color: var(--gray);
+    color: var(--text-muted);
     background: rgba(255, 255, 255, 0.05);
     padding: 6px 14px;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     font-weight: 600;
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-color);
     display: inline-block;
 }
 
@@ -371,7 +391,7 @@ h2 span {
 
 .experience-tech span {
     background: rgba(56, 189, 248, 0.1);
-    color: var(--primary);
+    color: var(--primary-color);
     font-size: 13px;
     padding: 6px 12px;
     border-radius: 6px;
@@ -379,7 +399,9 @@ h2 span {
 }
 
 
-/* SKILLS */
+/* ==========================================
+   SKILLS SECTION
+   ========================================== */
 
 .skills-container {
     display: grid;
@@ -388,16 +410,16 @@ h2 span {
 }
 
 .skill-card {
-    background: var(--card);
+    background: var(--card-bg);
     padding: 30px;
-    border-radius: 16px;
-    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
 }
 
 .skill-card h3 {
     margin-bottom: 25px;
     font-size: 20px;
-    color: var(--primary);
+    color: var(--primary-color);
 }
 
 .skill {
@@ -414,17 +436,20 @@ h2 span {
     height: 8px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .progress span {
     display: block;
     height: 100%;
-    background: var(--primary);
+    background: var(--primary-color);
     border-radius: 10px;
 }
 
 
-/* PROJECTS */
+/* ==========================================
+   PROJECTS SECTION
+   ========================================== */
 
 .projects-container {
     display: grid;
@@ -433,18 +458,18 @@ h2 span {
 }
 
 .project-card {
-    background: var(--card);
+    background: var(--card-bg);
     padding: 32px;
-    border-radius: 16px;
-    border: 1px solid var(--border);
-    transition: border-color 0.25s ease;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    transition: border-color var(--transition-fast);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .project-card:hover {
-    border-color: rgba(56, 189, 248, 0.3);
+    border-color: var(--border-hover);
 }
 
 .project-card h3 {
@@ -453,7 +478,7 @@ h2 span {
 }
 
 .project-card p {
-    color: var(--gray);
+    color: var(--text-muted);
     line-height: 1.7;
     margin-bottom: 25px;
 }
@@ -469,7 +494,7 @@ h2 span {
     padding: 6px 12px;
     border-radius: 6px;
     background: rgba(56, 189, 248, 0.1);
-    color: var(--primary);
+    color: var(--primary-color);
     font-size: 13px;
     font-weight: 500;
 }
@@ -479,11 +504,13 @@ h2 span {
 }
 
 
-/* CONTACT */
+/* ==========================================
+   CONTACT SECTION & POPUP
+   ========================================== */
 
 .contact form {
     max-width: 650px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .input-group {
@@ -495,14 +522,14 @@ input,
 textarea {
     width: 100%;
     padding: 16px;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-    background: var(--card);
-    color: var(--text);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--text-primary);
     font-size: 15px;
     margin-bottom: 16px;
     outline: none;
-    transition: border-color 0.25s ease;
+    transition: border-color var(--transition-fast);
 }
 
 input:focus,
@@ -519,10 +546,10 @@ textarea {
     position: fixed;
     top: 30px;
     right: 30px;
-    background: var(--text);
-    color: var(--bg);
+    background: var(--text-primary);
+    color: var(--bg-color);
     padding: 14px 24px;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     font-weight: 600;
     font-size: 14px;
     opacity: 0;
@@ -536,11 +563,13 @@ textarea {
 }
 
 
-/* FOOTER */
+/* ==========================================
+   FOOTER
+   ========================================== */
 
 footer {
     padding: 40px 10%;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid var(--border-color);
     text-align: center;
 }
 
@@ -550,14 +579,16 @@ footer h3 {
 }
 
 footer p {
-    color: var(--gray);
+    color: var(--text-muted);
     font-size: 14px;
 }
 
 
-/* RESPONSIVE DESIGN (MOBILE & TABLET) */
+/* ==========================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================== */
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     section {
         padding: 80px 6%;
     }
@@ -577,8 +608,9 @@ footer p {
         padding: 30px;
         gap: 20px;
         transition: right 0.3s ease;
-        border-left: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
+        border-left: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.5);
     }
     .nav-links.active {
         right: 0;
