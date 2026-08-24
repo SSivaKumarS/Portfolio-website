@@ -287,7 +287,7 @@ A full-stack weather application integrating weather APIs with a React frontend 
 
 ### GitHub
 
-https://github.com/SSivaKumarS/Weather-Api
+https://github.com/SSivaKumarS/forecastify-weather-api-app
 
 ---
 
